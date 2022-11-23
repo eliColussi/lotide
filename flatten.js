@@ -18,16 +18,17 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+const flattenedArray = [];
+
 const flatArray = function(array) {
-  let flattenedArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array.isArray(array[i])) {
-      for (const element of array[i]) {
-        flattenedArray.push(element);
-      } 
+    if (Array.isArray(array[i])) {
+      flatArray(array[i]);
     } else {
       flattenedArray.push(array[i]);
     }
   }
   return flattenedArray;
 };
+
+console.log(flatArray([1, 2, 3, [4, 8], 7, 4]));
