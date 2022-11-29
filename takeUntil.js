@@ -1,4 +1,3 @@
-const { default: test } = require("node:test");
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -24,13 +23,15 @@ const assertArraysEqual = function(array1, array2) {
 const takeUntil = function(array, callback) {
   let results = [];
   for (let item of array) {
-    if (callback === array[item]) {
+    if (callback(item)) {
       results = array.slice(0, item);
     }
   }
   return results;
 };
 
+
 const arr1 = ["4", "7", "3", "100", "30"];
 const result1 = takeUntil(arr1, x => x === 100);
-console.log(result1)
+console.log(result1);
+
