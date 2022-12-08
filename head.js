@@ -17,7 +17,5 @@ function head(array) {
 };
 
 
-console.log(head([100, 3, 7, 98, 600]));
-console.log(head(["Hello", "Lighthouse", "Labs"]));
 
 module.exports = head;
