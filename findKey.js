@@ -34,3 +34,5 @@ assertEqual(test2, expected2);
 let test3 = findKeys(object, x => x.stars < 2);
 let expected3 = "Ora";
 assertEqual(test3, expected3);
+
+module.exports = findKeys;

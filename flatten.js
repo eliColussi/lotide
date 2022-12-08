@@ -32,3 +32,5 @@ const flatArray = function(array) {
 };
 
 console.log(flatArray([1, 2, 3, [4, 8], 7, 4]));
+
+module.exports = flatArray;

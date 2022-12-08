@@ -35,3 +35,4 @@ const arr1 = ["4", "7", "3", "100", "30"];
 const result1 = takeUntil(arr1, x => x === 100);
 console.log(result1);
 
+module.exports = takeUntil;
